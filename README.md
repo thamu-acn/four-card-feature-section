@@ -26,9 +26,11 @@ Users should be able to:
 ### Screenshot
 
 Desktop
+
 ![](./desktop.jpeg)
 
 Mobile
+
 ![](./mobile.jpeg)
 
 ### Links
