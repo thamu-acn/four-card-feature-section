@@ -149,4 +149,8 @@ main {
     -moz-column-gap: 1.875rem;
          column-gap: 1.875rem;
   }
+  .header__description {
+    max-width: 32rem;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=style.css.map */
