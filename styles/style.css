@@ -72,6 +72,7 @@ body {
   color: hsl(229, 6%, 66%);
   font-size: 1.25rem;
   font-weight: 200;
+  display: block;
 }
 .header__text--heading {
   font-weight: 600;
