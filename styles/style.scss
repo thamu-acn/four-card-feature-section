@@ -1,3 +1,4 @@
+@use "./_reset.scss" as *;
 @use "./_colors.scss" as *;
 @use "./_fonts.scss" as *;
 
@@ -16,8 +17,7 @@ body {
 }
 
 .header {
-    text-align: center;
-    margin-top: 2rem;
+  text-align: center;
 
   &__text--normal {
     color: $textColor;
@@ -32,23 +32,45 @@ body {
   &__description {
     color: $textColor;
     font-weight: 200;
-    padding: 1rem;
+    margin: 1rem 0;
   }
 }
 
 main {
-    width: 80%;
-    max-width: 75rem;
     margin-top: 2rem;
+    padding: 1rem;
 }
 
-/* Grid Layout */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  row-gap: 1.875rem;
-  column-gap: 1.875rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.75rem $textColor;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  &__description {
+    color: $textColor;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  &__icon {
+    align-self: flex-end;
+  }
 
   &--supervisor {
     grid-column: 1 / 2;
@@ -76,48 +98,16 @@ main {
 
 }
 
-/* Card Styles */
-.card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.75rem $textColor;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  &__header h2 {
-    margin-bottom: 1rem;
-    color: #333;
-  }
-
-  &__description {
-    color: $textColor;
-    font-weight: 200;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-  }
-
-  &__icon {
-    align-self: flex-end;
-  }
-}
-
 /* Responsive Styles */
-@media (max-width: 768px) {
-  .container {
-    width: 90%;
+@media screen and (min-width: 48rem) {
+  main {    
+    width: 80%;
+    max-width: 75rem;
   }
 
   .card-grid {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header {    
-    width: 35%;
-  }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 1.875rem;}
 }
